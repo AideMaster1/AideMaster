@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations Master - Mon Master</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007bff;
+            padding: 10px 15px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        section {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .active {
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Informations sur la sélection en Master</h1>
+</header>
+
+<nav>
+    <a href="#" onclick="showSection('calendrier')">Calendrier & Informations</a>
+    <a href="#" onclick="showSection('consultation')">Consultation de l'Offre</a>
+    <a href="#" onclick="showSection('candidature')">Phase de Candidature</a>
+    <a href="#" onclick="showSection('admission')">Phase Principale d'Admission</a>
+    <a href="#" onclick="showSection('complementaire')">Phase Complémentaire d'Admission</a>
+</nav>
+
+<section id="calendrier" class="active">
+    <h2>Calendrier & Informations</h2>
+    <p>Voici les informations générales concernant le calendrier des sélections pour le Master via Mon Master.</p>
+    <!-- Ajoute ici des détails spécifiques -->
+</section>
+
+<section id="consultation">
+    <h2>Consultation de l'Offre de Formation</h2>
+    <p>Informations sur la consultation de l'offre de formation.</p>
+    <!-- Ajoute ici des détails spécifiques -->
+</section>
+
+<section id="candidature">
+    <h2>Phase de Candidature</h2>
+    <p>Instructions et détails sur la phase de candidature.</p>
+    <!-- Ajoute ici des détails spécifiques -->
+</section>
+
+<section id="admission">
+    <h2>Phase Principale d'Admission</h2>
+    <p>Détails sur la phase principale d'admission.</p>
+    <!-- Ajoute ici des détails spécifiques -->
+</section>
+
+<section id="complementaire">
+    <h2>Phase Complémentaire d'Admission</h2>
+    <p>Détails sur la phase complémentaire d'admission.</p>
+    <!-- Ajoute ici des détails spécifiques -->
+</section>
+
+<h2>Suivi des Convocations</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Formation</th>
+            <th>Date de Convocation</th>
+            <th>Statut</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Formation A</td>
+            <td><input type="date"></td>
+            <td>
+                <select>
+                    <option value="non">Non convoqué</option>
+                    <option value="oui">Convoqué</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Formation B</td>
+            <td><input type="date"></td>
+            <td>
+                <select>
+                    <option value="non">Non convoqué</option>
+                    <option value="oui">Convoqué</option>
+                </select>
+            </td>
+        </tr>
+        <!-- Ajoute d'autres lignes au besoin -->
+    </tbody>
+</table>
+
+<div class="footer">
+    <p>Pour plus d'informations, suivez-nous sur Twitter: <a href="https://twitter.com/Aide_Master" target="_blank">@Aide_Master</a></p>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
